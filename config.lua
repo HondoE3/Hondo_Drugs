@@ -35,3 +35,4 @@ Config.HarvestItems = {
     ["skunk"] = "skunk_seed", -- Skunk frø
     ["shrooms"] = "shrooms_seed" -- Svampe frø
 }
+Config.PoliceConfiscationReward = 5000  -- Beløb politiet modtager for konfiskation
