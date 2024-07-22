@@ -41,6 +41,27 @@ RegisterNetEvent('drugscript:server:giveHarvestItem', function(plantType)
     end
 end)
 
+-- Konfisker og giv politiet belønning
+RegisterNetEvent('drugscript:server:confiscatePlant', function(plantId)
+    local src = source
+    local xPlayer = QBCore.Functions.GetPlayer(src)
+    
+    if xPlayer and xPlayer.PlayerData.job.name == 'police' then
+        local societyAccount = exports['qb-management']:GetAccount('police')
+        if societyAccount then
+            societyAccount.addMoney(Config.PoliceConfiscationReward)
+        end
+        
+        plants[plantId] = nil
+
+        -- Fjern fra databasen
+        exports.oxmysql:execute('DELETE FROM plants WHERE id = ?', { plantId })
+
+        -- Send data tilbage til klienten
+        TriggerClientEvent('drugscript:client:loadPlants', -1, plants)
+    end
+end)
+
 -- Load data fra databasen ved server start
 AddEventHandler('onResourceStart', function(resource)
     if resource == GetCurrentResourceName() then
