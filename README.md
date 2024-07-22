@@ -2,7 +2,7 @@
 
 ## Hvordan gør du?
 
-1. Placer mappen inden i din `resources` mappe, eksempelvis `resources/[HONDO ER LÆKKER]/Hondo_Drugs`.
+1. Placer mappen inde i din `resources` mappe, eksempelvis `resources/[HONDO ER LÆKKER]/Hondo_Drugs`.
 
 2. Tilføj `ensure Hondo_Drugs` til din `server.cfg`. Hvis du er en af de seje personer som starter en hel mappe af gangen kan du bare skippe dette.
 
