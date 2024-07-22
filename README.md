@@ -1,4 +1,4 @@
-# Hondo's Totalt Sygt Seje Weed/Skunk/Svampe System
+# Hondo's Totalt Sygt Seje Weed/Skunk/Svampe System til QBCore og QBox.
 
 ## Hvordan gør du?
 
@@ -6,7 +6,9 @@
 
 2. Tilføj `ensure Hondo_Drugs` til din `server.cfg`. Hvis du er en af de seje personer som starter en hel mappe af gangen kan du bare skippe dette.
 
-3. Sørg for at du har følgende ressourcer installeret:
+3. Tjek `config.lua` igennem og `fxmanifest.lua` for om det er sat korrekt op til hvad du bruger.
+
+4. Sørg for at du har følgende ressourcer installeret:
    - `ox_lib`
    - `oxmysql`
    - `qb-core` (hvis du bruger qb-core)
@@ -15,7 +17,7 @@
    - `ox_target`
    - `ox_inventory` (hvis du bruger ox_inventory)
 
-4. Tilføj følgende kolonne til din database:
+5. Tilføj følgende kolonne til din database:
 
    ```sql
    CREATE TABLE `plants` (
