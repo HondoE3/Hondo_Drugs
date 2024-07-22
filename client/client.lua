@@ -33,6 +33,16 @@ RegisterNetEvent('drugscript:client:harvestPlant', function(plantId)
     end
 end)
 
+-- Konfisker (politi)
+RegisterNetEvent('drugscript:client:confiscatePlant', function(plantId)
+    local plantData = plants[plantId]
+    if plantData then
+        DeleteObject(plantData.prop)
+        plants[plantId] = nil
+        TriggerServerEvent('drugscript:server:confiscatePlant', plantId)
+    end
+end)
+
 -- Opdater status
 Citizen.CreateThread(function()
     while true do
