@@ -73,23 +73,29 @@ Citizen.CreateThread(function()
     end
 end)
 
--- Brug ox_target på props
+-- Brug ox_target til interaktioner
 exports.ox_target:addModel(Config.Plants.weed.props, {
     options = {
         {
-            label = 'Tjek plante',
+            label = 'Tjek status',
             event = 'drugscript:client:checkPlant',
             icon = 'fas fa-seedling'
         },
         {
-            label = 'Høst plante',
+            label = 'Høst',
             event = 'drugscript:client:harvestPlant',
             icon = 'fas fa-hand-scythe'
         },
         {
-            label = 'Ødelæg plante',
+            label = 'Ødelæg',
             event = 'drugscript:client:destroyPlant',
             icon = 'fas fa-trash'
+        },
+        {
+            label = 'Konfisker',
+            event = 'drugscript:client:confiscatePlant',
+            icon = 'fas fa-handcuffs',
+            job = 'police'  -- Kun for politiet
         }
     },
     distance = 2.5
