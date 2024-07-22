@@ -34,7 +34,7 @@ RegisterNetEvent('drugscript:server:giveHarvestItem', function(plantType)
     
     if Config.Inventory == "ox_inventory" then
         exports.ox_inventory:AddItem(src, item, 1)
-    elseif Config.Inventory == "qb_inventory" then
+    elseif Config.Inventory == "qb-inventory" then
         local Player = QBCore.Functions.GetPlayer(src)
         Player.Functions.AddItem(item, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], "add")
