@@ -2,9 +2,9 @@
 
 ## Hvordan gør du?
 
-1. Placer mappen indenfor din `resources` mappe, eksempelvis `resources/[HONDO ER LÆKKER]/Hondo_Weed`.
+1. Placer mappen inden i din `resources` mappe, eksempelvis `resources/[HONDO ER LÆKKER]/Hondo_Drugs`.
 
-2. Tilføj `ensure Hondo_Weed` til din `server.cfg`. Hvis du er en af de seje personer som starter en hel mappe af gangen kan du bare skippe dette.
+2. Tilføj `ensure Hondo_Drugs` til din `server.cfg`. Hvis du er en af de seje personer som starter en hel mappe af gangen kan du bare skippe dette.
 
 3. Sørg for at du har følgende ressourcer installeret:
    - `ox_lib`
